@@ -1,6 +1,3 @@
-// process.env.AWS_PROFILE = 'personal-user';
-
-const Bluebird = require('bluebird');
 const AWS = require('aws-sdk');
 
 if (process.env.NODE_ENV !== 'production') {
