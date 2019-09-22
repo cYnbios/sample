@@ -30,7 +30,8 @@ resource "aws_iam_role_policy" "web_role_policy" {
             "Effect": "Allow",
             "Action": [
                 "dynamodb:*",
-                "s3:*"
+                "s3:*",
+                "ecr:*"
             ],
             "Resource": "*"
         }

@@ -25,8 +25,8 @@ app.use(cors())
 server.applyMiddleware({ app });
 
 https.createServer({
-  key: fs.readFileSync('../server.key'),
-  cert: fs.readFileSync('../server.cert')
+  key: fs.readFileSync('./server.key'),
+  cert: fs.readFileSync('./server.cert')
 }, app)
 .listen(3000, function () {
   console.log(`🚀 Server ready`)
