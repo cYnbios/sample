@@ -1,13 +1,14 @@
-
-
 resource "aws_instance" "web" {
-  ami           = "ami-04b762b4289fba92b"
-  instance_type = "t2.micro"
+  ami                  = "ami-04b762b4289fba92b"
+  instance_type        = "t2.micro"
   iam_instance_profile = "${aws_iam_instance_profile.web_instance_profile.id}"
-  key_name = "${var.ssh_key}"
+  key_name             = "${var.ssh_key}"
+
   vpc_security_group_ids = [
     "${aws_security_group.web_sg.id}",
   ]
+
+  user_data = "${file("user-data.sh")}"
 }
 
 resource "aws_iam_instance_profile" "web_instance_profile" {
@@ -16,8 +17,8 @@ resource "aws_iam_instance_profile" "web_instance_profile" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name        = "web-sg"
-  vpc_id      = "${var.vpc_id}"
+  name   = "web-sg"
+  vpc_id = "${var.vpc_id}"
 
   ingress {
     from_port   = 0

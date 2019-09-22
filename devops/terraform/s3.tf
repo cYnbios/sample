@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "sample" {
-  bucket = "dngo.sample"
+  bucket = "${var.s3_bucket}"
   acl    = "public-read"
 }
 
