@@ -1,0 +1,4 @@
+## Sample GraphQL Server
+
+Serves and manages upload of photos.<br>
+Uploading a photo will create a record in DynamoDB and writes the photo to S3
