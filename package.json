@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-datasource-rest": "^0.6.4",
-    "apollo-server": "^2.9.3",
+    "apollo-server": "^2.14.2",
     "aws-sdk": "^2.533.0",
     "bluebird": "^3.5.5",
     "cors": "^2.8.5",
